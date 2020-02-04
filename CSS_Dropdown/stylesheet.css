@@ -10,10 +10,10 @@
     list-style-type: none;
 }
 
-.dropdown li {
+.topnav ul li ul li {
     display: none;
 }
 
-.dropdown:hov li {
-    display: block;
+.topnav ul li:hover ul li {
+    display: float;
 }
