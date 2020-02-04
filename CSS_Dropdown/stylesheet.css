@@ -1,7 +1,16 @@
+/****
+TOP NAVIGATION BAR
+****/
+
 .topnav {
     background-color: black;
     overflow: hidden;
 }
+
+
+/****
+TOP NAVIGATION STANDARD LINK BEHAVIOUR
+****/
 
 .topnav ul li {
     color: white;
@@ -10,10 +19,30 @@
     list-style-type: none;
 }
 
+
+/****
+HIDE Dropdown Sublinks by default
+****/
+
 .topnav ul li ul li {
     display: none;
 }
 
+
+/****
+DISPLAY Dropdown menus upon hovering
+****/
+
 .topnav ul li:hover ul li {
-    display: float;
+    display: inline-block;
+}
+
+
+/****
+HIGHLIGHT Dropdown links upon hovering
+****/
+
+.topnav ul li ul li:hover {
+    color: black;
+    background-color: white;
 }
