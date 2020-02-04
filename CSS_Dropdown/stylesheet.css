@@ -21,6 +21,20 @@ TOP NAVIGATION STANDARD LINK BEHAVIOUR
 
 
 /****
+HIGHLIGHT Standard navlinks
+DISABLED: TOO MANY ISSUES
+****/
+
+
+/****
+.topnav ul li:hover {
+    color: black;
+    background-color: white;
+}
+****/
+
+
+/****
 HIDE Dropdown Sublinks by default
 ****/
 
