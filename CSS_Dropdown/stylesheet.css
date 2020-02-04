@@ -19,7 +19,7 @@ TOP NAVIGATION BAR
 TOP NAVIGATION STANDARD LINK BEHAVIOUR
 ****/
 
-.dropdown {
+.dropdown_link {
     color: white;
     float: left;
     margin: 5px;
@@ -45,16 +45,17 @@ DISABLED: TOO MANY ISSUES
 HIDE Dropdown Sublinks by default
 ****/
 
-.dropdown ul li {
+
+/*.dropdown_link ul li {
     display: none;
-}
+}*/
 
 
 /****
 REMOVE standard padding and margins
 ****/
 
-.dropdown p {
+.dropdown_link p {
     margin: 0;
     padding: 0;
 }
@@ -64,7 +65,7 @@ REMOVE standard padding and margins
 HIGHLIGHT active menu elements
 ****/
 
-.dropdown:hover p {
+.dropdown_link:hover p {
     color: black;
     background-color: white;
     margin: 0;
@@ -98,7 +99,7 @@ HIGHLIGHT active menu elements for std link
 DISPLAY Dropdown menus upon hovering
 ****/
 
-.dropdown:hover ul li {
+.dropdown_link:hover div {
     display: block;
     text-align: center;
     margin-left: auto;
@@ -110,7 +111,15 @@ DISPLAY Dropdown menus upon hovering
 HIGHLIGHT Dropdown links upon hovering
 ****/
 
-.dropdown ul li:hover {
+.dropdown_menu ul li:hover {
     color: black;
     background-color: white;
+}
+
+.dropdown_menu ul li {
+    list-style-type: none;
+}
+
+.dropdown_menu {
+    display: none;
 }
