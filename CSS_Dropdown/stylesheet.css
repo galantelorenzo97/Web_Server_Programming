@@ -51,6 +51,50 @@ HIDE Dropdown Sublinks by default
 
 
 /****
+REMOVE standard padding and margins
+****/
+
+.dropdown p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/****
+HIGHLIGHT active menu elements
+****/
+
+.dropdown:hover p {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+/****
+REMOVE standard padding and margins for std link
+****/
+
+.std_link p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/****
+HIGHLIGHT active menu elements for std link
+****/
+
+.std_link:hover p {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+/****
 DISPLAY Dropdown menus upon hovering
 ****/
 
