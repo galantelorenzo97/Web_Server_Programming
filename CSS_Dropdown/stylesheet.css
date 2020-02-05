@@ -120,6 +120,12 @@ HIGHLIGHT Dropdown links upon hovering
     list-style-type: none;
 }
 
+.dropdown_menu ul {
+    background-color: black;
+    position: absolute;
+    padding-left: 0;
+}
+
 .dropdown_menu {
     display: none;
 }
