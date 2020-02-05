@@ -17,11 +17,14 @@ TOP NAVIGATION BAR
 .std_link {
     color: white;
     float: left;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 5px;
     margin-right: 5px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
     list-style-type: none;
+    border: 2px solid white;
 }
 
 
@@ -32,11 +35,14 @@ TOP NAVIGATION STANDARD LINK BEHAVIOUR
 .dropdown_link {
     color: white;
     float: left;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 5px;
     margin-right: 5px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
     list-style-type: none;
+    border: 2px solid white;
 }
 
 
