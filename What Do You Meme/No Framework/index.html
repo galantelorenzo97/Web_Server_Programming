@@ -90,14 +90,38 @@
                 <div class="column">
                     Third column
                 </div>
-                <div class="column">
-                    Fourth column
+                <div class="box" id="VueBox">
+                    <div class="notification" v-for="(x, i) in todos">
+                        <button class="delete" @click="rmtodo(i)"></button> {{x.text}}
+                    </div>
+                    <input class="input" type="text" placeholder="Text input" v-model="newTodo">
+                    <button class="btn" @click="add()"> Add </button>
                 </div>
             </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- With every JS array the second parameter is always the index. -->
+    <script>
+        var app = new Vue({
+            el: '#VueBox',
+            data: {
+                todos: [{
+                    text: 'Learn Javascript'
+                }, {
+                    text: 'Learn Vue'
+                }, {
+                    text: 'Build something awesome'
+                }]
+            },
+            methods: {
+                rmtodo(i) {
+                    this.todos.splice(i, 1);
+                }
+            }
+
+        })
     </script>
 </body>
 
