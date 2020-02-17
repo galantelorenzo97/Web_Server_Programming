@@ -4,16 +4,20 @@
   "description": "Web Server Programming Class Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
   "dependencies": {
     "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/galantelorenzo97/Web_Server_Programming.git"
   },
-  "author": "",
+  "author": "Engr. Lorenzo Galante",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/galantelorenzo97/Web_Server_Programming/issues"
