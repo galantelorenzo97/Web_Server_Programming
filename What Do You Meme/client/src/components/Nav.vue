@@ -5,7 +5,8 @@
         <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
       </a>
 
-      <a
+      <a :class="{ 'is-active':isOpen }" 
+        @click="isOpen = !isOpen"
         role="button"
         class="navbar-burger burger"
         aria-label="menu"
@@ -18,7 +19,7 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div :class="{ 'is-active':isOpen }" class="navbar-menu">
       <div class="navbar-start">
         <router-link to="/" class="navbar-item">Home</router-link>
         <router-link to="/about" class="navbar-item">About</router-link>
@@ -51,7 +52,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    isOpen: false
+  })
+};
 </script>
 
 <style>
