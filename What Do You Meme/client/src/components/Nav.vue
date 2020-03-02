@@ -5,7 +5,7 @@
         <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
       </a>
 
-      <a :class="{ 'is-active':isOpen }" 
+      <a :class="{ 'is-active-menu':isOpen }" 
         @click="isOpen = !isOpen"
         role="button"
         class="navbar-burger burger"
@@ -19,10 +19,11 @@
       </a>
     </div>
 
-    <div :class="{ 'is-active':isOpen }" class="navbar-menu">
+    <div :class="{ 'is-active-menu':isOpen }" class="navbar-menu">
       <div class="navbar-start">
-        <router-link to="/" class="navbar-item">Home</router-link>
-        <router-link to="/about" class="navbar-item">About</router-link>
+        <router-link to="/" class="navbar-item" active-class="is-current">Home</router-link>
+        <router-link to="/about" class="navbar-item" active-class="is-current">About</router-link>
+        <router-link to="Game" class="navbar-item" active-class="is-current">Game</router-link>
 <!--
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">More</a>
@@ -60,4 +61,8 @@ export default {
 </script>
 
 <style>
+  .is-active {
+    font-weight: bold;
+    color: blueviolet;
+  }
 </style>
