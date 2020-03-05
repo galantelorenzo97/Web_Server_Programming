@@ -1,5 +1,6 @@
 <template>
   <form class="container" @submit.prevent="login">
+    {{login}}
     <div class="field">
       <p class="control has-icons-left has-icons-right">
         <input class="input" type="email" placeholder="Email" v-model="email">
