@@ -21,9 +21,9 @@
 
     <div :class="{ 'is-active-menu':isOpen }" class="navbar-menu">
       <div class="navbar-start">
-        <router-link to="/" class="navbar-item" active-class="is-current">Home</router-link>
-        <router-link to="/about" class="navbar-item" active-class="is-current">About</router-link>
-        <router-link to="Game" class="navbar-item" active-class="is-current">Game</router-link>
+        <router-link to="/" class="navbar-item" active-class="is-enabled" exact>Home</router-link>
+        <router-link to="/about" class="navbar-item" active-class="is-enabled">About</router-link>
+        <router-link to="Game" class="navbar-item" active-class="is-enabled">Game</router-link>
 <!--
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">More</a>
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style>
-  .is-active {
+  a.is-enabled {
     font-weight: bold;
     color: blueviolet;
   }
