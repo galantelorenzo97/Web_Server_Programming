@@ -1,0 +1,26 @@
+{
+  "name": "what-do-you-meme",
+  "version": "1.0.0",
+  "description": "Web Server Programming Class Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galantelorenzo97/Web_Server_Programming.git"
+  },
+  "author": "Engr. Lorenzo Galante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galantelorenzo97/Web_Server_Programming/issues"
+  }
+}
