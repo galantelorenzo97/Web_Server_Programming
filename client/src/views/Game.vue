@@ -1,26 +1,31 @@
 <template>
-  <section class="container">
-    <div class="hero">
-      <h1 class="title">Game Page</h1>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <h1 class="title is-1">Game Page</h1>
+      </div>
     </div>
+
     <div class="card">
       <div class="card-content">
         <ul>
-          <li v-for="player in Players" :key="player.Name">{{ player.Name }} {{ player.Score }}</li>
+          <li v-for="player in Players" :key="player.Name">{{player.Name}} {{player.Score}}</li>
         </ul>
       </div>
 
       <img :src="CurrentPicture" class="card-image" />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import { Players, PictureDeck, CurrentPicture, Init } from "../models/Game";
-Init();
+
 export default {
   name: "Home",
+  created() {
+    Init();
+  },
   data: () => ({
     Players,
     PictureDeck,
@@ -30,8 +35,8 @@ export default {
 };
 </script>
 
-<style>
+<style >
 img.card-image {
   width: 100%;
 }
-</style> 
+</style>
