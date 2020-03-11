@@ -2,7 +2,7 @@
   "name": "what-do-you-meme",
   "version": "1.0.0",
   "description": "Web Server Programming Class Project",
-  "main": "index.js",
+  "main": "Server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js"
