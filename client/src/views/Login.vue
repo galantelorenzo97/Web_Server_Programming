@@ -1,6 +1,6 @@
 <template>
   <form class="container" @submit.prevent="login">
-    {{login}}
+    {{error}}
     <div class="field">
       <p class="control has-icons-left has-icons-right">
         <input class="input" type="email" placeholder="Email" v-model="email">
@@ -42,7 +42,7 @@
     methods: {
       login(){
         try {
-          login(this.email, this.password);
+          Login(this.email, this.password);
           this.$router.push('/game');
         } catch (error) {
           this.error = error;
