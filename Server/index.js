@@ -1,22 +1,23 @@
 const express = require('express');
 const gameController = require('./controllers/game');
+const path = require('path')
+
 
 const app = express();
 const port = 3000;
 
-
-//Dictate template to render or response to send
 app
     .use(express.json())
-    .use(express.urlencoded({ extended : true }))
+    .use(express.urlencoded({ extended: true }))
     .use(express.static(__dirname + '/../client/dist'))
-    .get('/', (req,res) => res.send('Hello World') )
+    .get('/', (req, res) => res.send('This class is awesome!'))
     .use('/game', gameController)
 
-    /* FIX CATCH ALL
-    .use((req,res) => {
-        const homePath = joi 
-        res.sendFile(__dirname + '/../client/dist/index.html')});
-        */
-//Determine for which to listen to the machine.
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+    .use((req, res) => {
+        const homePath = path.join(__dirname, '/../client/dist/index.html');
+        console.log(homePath);
+        res.sendFile(homePath)
+    })
+
+
+app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
