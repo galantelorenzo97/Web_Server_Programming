@@ -26,11 +26,11 @@ export let CurrentPicture = "";
 
 export const CardsInPlay = [];
 
-export function Init(){
-    Players.push( {Name:Users.CurrentUser.Name, Score: 0, isDealer:true})
+export function Init() {
+    Players.push({ Name: Users.CurrentUser.Name, Score: 0, isDealer: true })
 
     MyCards.push(CaptionsDeck[0])
     MyCards.push(CaptionsDeck[1]);
 
     CurrentPicture = PictureDeck[0];
-} 
+}

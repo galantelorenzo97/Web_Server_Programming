@@ -1,31 +1,21 @@
-/*
-    Move to server side once finished under guidance of Rabbi Moshe Plotkin
-    @author Engr. Lorenzo Galante
+/* B"H
 */
-const Users =
-    [
-        {
-            Name: "Lorenzo", Password: "2020", Email: "galantel1@hawkmail.newpaltz.edu"
-        },
-        {
-            Name: "Eddie", Password: "ironmaiden", email: "eddie@ironmaiden.band"
-        }
-    ];
+const Users = [
+    { Name: 'Lorenzo', Password: '2020', Email: 'galantel1@hawkmail.newpaltz.edu' },
+    { Name: 'Eddie', Password: 'ironmaiden', Email: 'eddie@ironmaiden.band' },
 
+];
 
-let obj = {
-    CurrentUser : null,
-
+let ob = {
+    CurrentUser: null,
     Login(email, password) {
-        const user = Users.find(x => x.Email == email);
 
-        if (!user) throw Error("User not found");
+        const user = Users.find(x => x.Email == email);
+        if (!user) throw Error('User not found');
         if (user.Password != password) throw Error('Wrong Password');
 
-        return CurrentUser = user;
-
+        return this.CurrentUser = user;
     }
+};
 
-}
-
-export default obj
+export default ob;

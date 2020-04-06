@@ -1,8 +1,6 @@
 <template>
   <div class="buttons">
-    <div v-if="CurrentUser">
-        Welcome {{CurrentUser.Name}}
-    </div>
+    <div v-if="CurrentUser">Welcome {{CurrentUser.Name}}</div>
     <div v-else>
       <a class="button is-primary">
         <strong>Sign up</strong>
