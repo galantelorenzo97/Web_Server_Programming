@@ -9,6 +9,9 @@ const Users =
         },
         {
             Name: "Eddie", Password: "ironmaiden", email: "eddie@ironmaiden.band", userId: 1
+        },
+        { 
+            Name: 'Bernie', Password: '2020', Email: 'plotkinm@newpaltz.edu', userId: 2 
         }
     ];
 
