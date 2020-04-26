@@ -5,7 +5,7 @@
   "main": "Server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon --watch ./server server/index.js"
   },
   "dependencies": {
     "bulma": "^0.8.0",

@@ -5,22 +5,33 @@ export let State = {};
 export let MyCards = [];
 
 let interval;
-export function Init(){
-    myFetch('game/join', {})
-        .then(x=> {
-            myCards = x;
-        })
-}
 
-export function Run(){
-    myFetch('/game')
-        .then(x => State = x);
-}
-
-export function Start(){
-    interval = setInterval(Run, 2000 );
-}
-
-export function Pause(){
-    clearInterval(interval);
-}
+export default { 
+    State: {},
+    MyCards: [],
+    Init(){
+        if(this.MyCards.length){
+            // The player already joined the game. They just temporarily went to a different view.
+            return;
+        }
+        myFetch('/game/join', {})
+            .then(x=> { 
+                this.MyCards = x.MyCards;
+                console.log(x);
+            })
+            .catch(err=> console.warn(err));
+    },
+    Run(){
+        myFetch('/game')
+            .then(x=> { 
+                this.State = x;
+                console.log(x);
+            });
+    },
+    Start(){
+        interval = setInterval(()=> this.Run(), 2000 )
+    },
+    Pause(){
+        clearInterval(interval);
+    } 
+} 
